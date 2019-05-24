@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+      
+	<h:head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>Add Client Page</title>
+		<h:outputStylesheet library="css" name="add-client-style.css"  />	
+		
+	</h:head>
+	<h:body>
+	
+	    <h:form class="add-form-style">
+			<ul>
+			<li>
+				<h3>Please Enter Your Account Number</h3>
+			    <h:inputText class="field-style field-full" value="#{client.accountNum}"
+			                 a:placeholder="Account Number"
+			                 required="true"
+			                 requiredMessage="Account Number is Mandatory!"/> 
+			                 <h:message style="color:red" for="accountNum"></h:message>
+			</li>
+			<li>
+				<h3>Please Enter The Amount Money</h3>
+			    <h:inputText class="field-style field-full" value="#{client.amount}"
+			                 a:placeholder="How Much"/>
+			</li>
+			<li>
+				<h:commandButton value="Submit" action="#{appController.withdrawMoney(client)}"/>
+			</li>
+			</ul>
+		</h:form>
+	</h:body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+      
+	<h:head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>Main Page</title>
+		<h:outputStylesheet library="css" name="style.css"  />
+		
+	</h:head>
+	<h:body>
+		<div class="form-style">
+		
+			<h:messages globalOnly="true"/>
+			
+            <h2>Please Select Choice..</h2>
+			<h:form>
+				<h:commandButton value="Add New Client" styleClass="btn" action="add-client-form"/>
+				<br/><br/>
+				<h:commandButton value="Check Your Balance" styleClass="btn" action="check-balance"/>
+				<br/><br/>
+				<h:commandButton value="Deposite Money" styleClass="btn" action="deposit"/>
+				<br/><br/>
+				<h:commandButton value="Withdraw Money" styleClass="btn" action="withdraw"/>
+				<br/><br/>
+				<h:commandButton value="Calculate Interest Amount" styleClass="btn" action="interest-amount"/>
+				
+			</h:form>
+			
+		</div>
+	</h:body>
+
+</html>
